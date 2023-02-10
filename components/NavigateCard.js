@@ -22,8 +22,8 @@ const NavigateCard = () => {
   return (
     <SafeAreaView className =" flex-1 bg-white">
       <Text className="text-center py-4 text-xl">NavigateCard</Text>
-      <View className ="inline-flex">
-            <View className="p-2 h-16">
+      <View className ="flex-row">
+            <View className="p-2 h-16 flex-1">
                     <GooglePlacesAutocomplete 
                     styles={{textInput:{fontSize:18,borderRadius:0,backgroundColor:"#DDDDDF"}, }}
                     
@@ -41,10 +41,24 @@ const NavigateCard = () => {
             
                 
             </View>
-            <TouchableOpacity onPress={()=>onClick()} className="pl-2">
+            <TouchableOpacity onPress={()=>onClick()} className="px-2">
                 <Icon name="arrowright" color="white" type="antdesign" className="p-2 bg-black rounded-full w-10 mt-2"></Icon>
+                
             </TouchableOpacity>
+            
 
+      </View>
+      <View className="flex-row bg-white justify-evenly py-2 mt-auto border-gray-100 border-t">
+                    <TouchableOpacity 
+                    onPress={()=>navigation.navigate(RideOptionsCard)}
+                    className="flex flex-row justify-between bg-black w-24 px-4 py-3 rounded-full">
+                        <Icon name="car" type="font-awesome" color="white" size={16}/>
+                            <Text className="text-white text-center"> Rides</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity className="flex flex-row justify-between bg-white w-24 px-4 py-3 rounded-full">
+                        <Icon name="fast-food-outline" type="ionicon" color="black" size={16}/>
+                            <Text className="text-black text-center"> Rides</Text>
+                    </TouchableOpacity>
       </View>
     </SafeAreaView>
   )

@@ -25,8 +25,8 @@ const HomeScreen = () => {
           source={require('../assets/logo.svg')}
           className="mt-2"
         ></Image>
-        <TouchableOpacity onPress={()=>{test();}}><Text>Search</Text></TouchableOpacity>
-        <View className="h-12" onPress={()=>test()}>
+        <TouchableOpacity onPress={()=>{test();}} className=""><Text>Search</Text></TouchableOpacity>
+        <View className="h-12">
           <GooglePlacesAutocomplete 
             // styles={{container:{flex:0,},
             //         textInput:{fontSize:18,}, }}
